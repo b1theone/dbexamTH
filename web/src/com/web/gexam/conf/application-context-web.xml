@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<bean name="/index" class="com.web.gexam.action.IndexAction">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+
+	<bean name="/master" class="com.web.gexam.action.MasterAction">
+		<property name="examQuestionService">
+			<ref bean="examQuestionService" />
+		</property>
+		<property name="examQuestionImageService">
+			<ref bean="examQuestionImageService" />
+		</property>
+		<property name="examQuestionAnswerService">
+			<ref bean="examQuestionAnswerService" />
+		</property>
+		<property name="templateQuestionService">
+			<ref bean="templateQuestionService" />
+		</property>
+		<property name="templateImageService">
+			<ref bean="templateImageService" />
+		</property>
+		<property name="templateAnswerService">
+			<ref bean="templateAnswerService" />
+		</property>
+		<property name="indicatorService">
+			<ref bean="indicatorService" />
+		</property>
+		<property name="constantService">
+			<ref bean="constantService" />
+		</property>
+		<property name="examSuiteService">
+			<ref bean="examSuiteService" />
+		</property>
+		<property name="examSuiteQuestionService">
+			<ref bean="examSuiteQuestionService" />
+		</property>
+	</bean>
+
+</beans>

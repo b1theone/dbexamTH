@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="TIS-620"?>
+<!DOCTYPE root [ <!ELEMENT name (name*) ><!ATTLIST nameCombo id ID #REQUIRED> ]>
+<combobox>
+	<nameCombo id="option_display">
+		<option value="50" label="50" />
+		<option value="100" label="100" />
+		<option value="200" label="200" />
+	</nameCombo>
+	<nameCombo id="monthNameEn">
+		<option value="1" label="January" />
+		<option value="2" label="February" />
+		<option value="3" label="March" />
+		<option value="4" label="April" />
+		<option value="5" label="May" />
+		<option value="6" label="June" />
+		<option value="7" label="July" />
+		<option value="8" label="August" />
+		<option value="9" label="September" />
+		<option value="10" label="October" />
+		<option value="11" label="November" />
+		<option value="12" label="December" />
+	</nameCombo>
+</combobox>

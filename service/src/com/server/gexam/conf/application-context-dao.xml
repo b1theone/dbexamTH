@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<!-- Master -->
+	<bean id="indicatorDao"
+		class="com.server.gexam.dao.impl.IndicatorDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.Indicator</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="templateQuestionDao"
+		class="com.server.gexam.dao.impl.TemplateQuestionDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.TemplateQuestion</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="templateImageDao"
+		class="com.server.gexam.dao.impl.TemplateImageDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.TemplateImage</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="templateAnswerDao"
+		class="com.server.gexam.dao.impl.TemplateAnswerDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.TemplateAnswer</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="constantDao"
+		class="com.server.gexam.dao.impl.ConstantDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.Constant</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Exam -->
+	<bean id="examQuestionDao"
+		class="com.server.gexam.dao.impl.ExamQuestionDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.ExamQuestion</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="examQuestionImageDao"
+		class="com.server.gexam.dao.impl.ExamQuestionImageDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.ExamQuestionImage</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="examQuestionAnswerDao"
+		class="com.server.gexam.dao.impl.ExamQuestionAnswerDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.ExamQuestionAnswer</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="examSuiteDao"
+		class="com.server.gexam.dao.impl.ExamSuiteDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.ExamSuite</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="examSuiteQuestionDao"
+		class="com.server.gexam.dao.impl.ExamSuiteQuestionDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.ExamSuiteQuestion</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Login -->
+	<bean id="userDao" class="com.server.gexam.dao.impl.UserDaoImpl">
+		<constructor-arg>
+			<value>com.server.gexam.entity.User</value>
+		</constructor-arg>
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+</beans>

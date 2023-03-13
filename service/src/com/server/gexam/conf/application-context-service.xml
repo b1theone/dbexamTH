@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+	<!-- Master -->
+	<bean id="indicatorService"
+		class="com.server.gexam.service.impl.IndicatorServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="indicatorDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="templateQuestionService"
+		class="com.server.gexam.service.impl.TemplateQuestionServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="templateQuestionDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="templateImageService"
+		class="com.server.gexam.service.impl.TemplateImageServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="templateImageDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="templateAnswerService"
+		class="com.server.gexam.service.impl.TemplateAnswerServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="templateAnswerDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="constantService"
+		class="com.server.gexam.service.impl.ConstantServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="constantDao" />
+		</constructor-arg>
+	</bean>
+
+	<!-- Exam -->
+	<bean id="examQuestionService"
+		class="com.server.gexam.service.impl.ExamQuestionServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="examQuestionDao" />
+		</constructor-arg>
+		<constructor-arg index="1">
+			<ref bean="examQuestionAnswerDao" />
+		</constructor-arg>
+		<constructor-arg index="2">
+			<ref bean="examQuestionImageDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="examQuestionImageService"
+		class="com.server.gexam.service.impl.ExamQuestionImageServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="examQuestionImageDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="examQuestionAnswerService"
+		class="com.server.gexam.service.impl.ExamQuestionAnswerServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="examQuestionAnswerDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="examSuiteService"
+		class="com.server.gexam.service.impl.ExamSuiteServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="examSuiteDao" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="examSuiteQuestionService"
+		class="com.server.gexam.service.impl.ExamSuiteQuestionServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="examSuiteQuestionDao" />
+		</constructor-arg>
+	</bean>
+
+	<!-- Login -->
+	<bean id="userService"
+		class="com.server.gexam.service.impl.UserServiceImpl">
+		<constructor-arg index="0">
+			<ref bean="userDao" />
+		</constructor-arg>
+	</bean>
+
+</beans>

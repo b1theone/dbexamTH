@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+
+	<description>JSTL 1.1 Date Util library</description>
+	<display-name>JSTL Date Util</display-name>
+	<tlib-version>1.1</tlib-version>
+	<short-name>dateutil</short-name>
+	<uri></uri>
+
+	<tag>
+		<name>date-format</name>
+		<tag-class>com.web.taglib.date.DateFormat</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<description>
+				Default: Locale(TH), Format(dd/MM/yyyy)
+        	</description>
+			<name>date</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>format</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>local</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	
+	<function>
+		<name>dayOfWeek</name>
+		<function-class>com.util.DateTimeUtil</function-class>
+		<function-signature>int dayOfWeek(java.lang.Integer, java.lang.Integer, java.lang.Integer)</function-signature>
+		<example>
+	      You have ${dateutil:dayOfWeek(year, month, day)}
+	    </example>
+	</function>
+	
+	<function>
+		<name>dayBetweenDate</name>
+		<function-class>com.util.DateTimeUtil</function-class>
+		<function-signature>int dayBetweenDate(java.util.Date, java.util.Date)</function-signature>
+		<example>
+	      You have ${dateutil:dayBetweenDate(dateStart, dateEnd)}
+	    </example>
+	</function>
+	
+	<function>
+		<name>dayOfMonth</name>
+		<function-class>com.util.DateTimeUtil</function-class>
+		<function-signature>int dayOfMonth(java.util.Date)</function-signature>
+		<example>
+	      You have ${dateutil:dayOfMonth(date)}
+	    </example>
+	</function>
+	
+	<function>
+		<name>monthOfDate</name>
+		<function-class>com.util.DateTimeUtil</function-class>
+		<function-signature>int monthOfDate(java.util.Date)</function-signature>
+		<example>
+	      You have ${dateutil:monthOfDate(date)}
+	    </example>
+	</function>
+
+</taglib>

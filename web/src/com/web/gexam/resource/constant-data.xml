@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="TIS-620"?>
+<!DOCTYPE root [ <!ELEMENT name (name*) ><!ATTLIST nameConstant id ID #REQUIRED> ]>
+<constant>
+	<nameConstant id="XMLConfig">
+		<redirect-home url="http://10.254.27.6/web/" />
+		
+	</nameConstant>
+</constant>

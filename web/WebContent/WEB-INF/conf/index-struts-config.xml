@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="indexForm"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="mode" type="java.lang.String" />
+			
+			<form-property name="un" type="java.lang.String" />
+			<form-property name="pw" type="java.lang.String" />
+
+		</form-bean>
+	</form-beans>
+	<action-mappings>
+		<action name="indexForm" scope="request" parameter="mode"
+			path="/index"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+
+			<!-- Web Page -->
+			<forward name="Index" path="/page/index.jsp" />
+
+			<forward name="json_tag" path="/page/json_tag.jsp" />
+			<forward name="redirect" path="/page/redirect.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>

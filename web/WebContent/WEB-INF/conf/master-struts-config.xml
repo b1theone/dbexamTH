@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="masterForm"
+			type="org.apache.struts.action.DynaActionForm">
+			<form-property name="id" type="java.lang.String" />
+			<form-property name="mode" type="java.lang.String" />
+			
+			<form-property name="questImageId" type="java.lang.String" />
+			<form-property name="questAnswerId" type="java.lang.String" />
+
+			<form-property name="ids" type="java.lang.String" />
+			<form-property name="checkIds" type="java.lang.String[]" />
+			
+			<form-property name="indicatorId" type="java.lang.String" />
+			<form-property name="templateName" type="java.lang.String" />
+			<form-property name="title" type="java.lang.String" />
+			<form-property name="question" type="java.lang.String" />
+			<form-property name="conditionType" type="java.lang.String" />
+			<form-property name="templateType" type="java.lang.String" />
+			<form-property name="randomType" type="java.lang.String" />
+			<form-property name="rateType" type="java.lang.String" />
+			<form-property name="calculateType" type="java.lang.String" />
+			<form-property name="parameter1" type="java.lang.String" />
+			<form-property name="parameter2" type="java.lang.String" />
+			<form-property name="defaultAmount" type="java.lang.String" />
+			
+			<form-property name="fileName1" type="java.lang.String"/>
+			<form-property name="fileName2" type="java.lang.String"/>
+			<form-property name="fileName3" type="java.lang.String"/>
+			<form-property name="fileName4" type="java.lang.String"/>
+			<form-property name="fileId1" type="java.lang.String"/>
+			<form-property name="fileId2" type="java.lang.String"/>
+			<form-property name="fileId3" type="java.lang.String"/>
+			<form-property name="fileId4" type="java.lang.String"/>
+			<form-property name="uploadFile1" type="org.apache.struts.upload.FormFile" />
+			<form-property name="uploadFile2" type="org.apache.struts.upload.FormFile" />
+			<form-property name="uploadFile3" type="org.apache.struts.upload.FormFile" />
+			<form-property name="uploadFile4" type="org.apache.struts.upload.FormFile" />
+			<form-property name="uploadFileName1" type="java.lang.String"/>
+			<form-property name="uploadFileName2" type="java.lang.String"/>
+			<form-property name="uploadFileName3" type="java.lang.String"/>
+			<form-property name="uploadFileName4" type="java.lang.String"/>
+			<form-property name="unitName1" type="java.lang.String"/>
+			<form-property name="unitName2" type="java.lang.String"/>
+			<form-property name="unitName3" type="java.lang.String"/>
+			<form-property name="unitName4" type="java.lang.String"/>
+			<form-property name="unit1" type="java.lang.String"/>
+			<form-property name="unit2" type="java.lang.String"/>
+			<form-property name="unit3" type="java.lang.String"/>
+			<form-property name="unit4" type="java.lang.String"/>
+			<form-property name="amount1" type="java.lang.String"/>
+			<form-property name="amount2" type="java.lang.String"/>
+			<form-property name="amount3" type="java.lang.String"/>
+			<form-property name="amount4" type="java.lang.String"/>
+			<form-property name="imageOnly" type="java.lang.String"/>
+			
+			<form-property name="answerName" type="java.lang.String"/>
+			<form-property name="answerSeq" type="java.lang.String"/>
+			<form-property name="answerYN" type="java.lang.String"/>
+
+			<form-property name="resultList" type="java.util.List" />
+			<form-property name="questionList" type="java.util.List" />
+			<form-property name="sampleList" type="java.util.List" />
+			<form-property name="imageList" type="java.util.List" />
+			<form-property name="answerList" type="java.util.List" />
+			<form-property name="comboIndicator" type="java.util.List" />
+			<form-property name="questionAddList" type="java.util.List" />
+			
+			<form-property name="indicatorIdSearch" type="java.lang.String" />
+			<form-property name="questionSearch" type="java.lang.String" />
+			<form-property name="suiteSearch" type="java.lang.String" />
+			
+			<form-property name="indicatorIdAdd" type="java.lang.String" />
+			<form-property name="questionAmount" type="java.lang.String" />
+			
+			<form-property name="suiteName" type="java.lang.String" />
+			<form-property name="scorePass" type="java.lang.String" />
+			<form-property name="scoreMax" type="java.lang.String" />
+			<form-property name="scorePoint" type="java.lang.String" />
+			<form-property name="examTime" type="java.lang.String" />
+			<form-property name="suiteActive" type="java.lang.String" />
+			
+			<form-property name="suiteQuestId" type="java.lang.String" />
+			<form-property name="questionId" type="java.lang.String" />
+
+		</form-bean>
+	</form-beans>
+	<action-mappings>
+		<action name="masterForm" scope="session" parameter="mode"
+			path="/master"
+			type="org.springframework.web.struts.DelegatingActionProxy">
+
+			<!-- Web Page -->
+			<forward name="MA01" path="/page/master/MA01_Question.jsp" />
+			<forward name="MA02" path="/page/master/MA02_QuestionAdd.jsp" />
+			<forward name="MA03" path="/page/master/MA03_QuestionSample.jsp" />
+			<forward name="MA04" path="/page/master/MA04_QuestionEdit.jsp" />
+			<forward name="MA05" path="/page/master/MA05_ManualQuestion.jsp" />
+			<forward name="MA06" path="/page/master/MA06_ManualQuestionImage.jsp" />
+			<forward name="MA07" path="/page/master/MA07_Suite.jsp" />
+			<forward name="MA08" path="/page/master/MA08_SuiteAdd.jsp" />
+			<forward name="MA09" path="/page/master/MA09_SuiteQuestion.jsp" />
+			<forward name="MA10" path="/page/master/MA10_SuiteQuestionAdd.jsp" />
+			<forward name="MA11" path="/page/master/MA11_QuestionView.jsp" />
+			<forward name="MA12" path="/page/master/MA12_ManualQuestionView.jsp" />
+
+			<forward name="json_tag" path="/page/json_tag.jsp" />
+			<forward name="redirect" path="/page/redirect.jsp" />
+		</action>
+	</action-mappings>
+</struts-config>
